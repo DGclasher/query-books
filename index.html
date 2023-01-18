@@ -8,20 +8,29 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script defer src="assets/script/main.js"></script>
+    <link rel="stylesheet" href="assets/style/style.css">
     <title>Query Books</title>
   </head>
   <body>
+
+    <div class="topnav">
+      <a href="author.html" class="authors nav-link">Authors</a>
+      <a href="books.html" class="books nav-link">Books</a>
+      <a href="index.html" class="home nav-link">Home</a>
+    </div>
+    <div class="container container-body">
     <h1>Query Books Here</h1>
 
-    <input type="text" name="" id="book_query" placeholder="Senhor dos Aneis">
-    <input type="submit" value="Search Book" id="search_btn">
-    <div class="container">
+    <input type="text" class="search-bar" id="book_query" placeholder="Senhor dos Aneis">
+    <input type="submit" value="Search Book" id="search-btn">
+    <div class="container contents">
         <img src="" alt="" id="book_cover">
         <h2 id="book_title"></h2>
         <p id="book_desc"></p>
-        <a href=""></a>
+        <a href="" ></a>
 
     </div>
+  </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,4 +1,22 @@
 
+let links = document.querySelectorAll(".nav-link")
+// if(links.length){
+//     links.forEach((link) => {
+//         link.addEventListener("click", (e) => {
+//             links.forEach((link) => {
+//                 link.classList.remove('active');
+//             });
+//             e.preventDefault();
+//             link.classList.add('active')
+//         })
+//     })
+// }
+
+function clearElements(){
+    document.getElementById("book_title").innerHTML="";
+    document.getElementById("book_desc").innerHTML=""
+    document.getElementById("book_cover").setAttribute('src', "")
+}
 
 let getBooks = {
     fetchKey : function(query){
@@ -33,8 +51,19 @@ let getBooks = {
 // https://covers.openlibrary.org/b/isbn/9788533619623.jpg -> Cover
 // https://covers.openlibrary.org/b/id/9255566.jpg
 
-document.getElementById("search_btn").addEventListener("click", function(){
+function runGetBooks(){
     let query = document.getElementById("book_query").value
     console.log(query)
+    clearElements();
     getBooks.fetchKey(query);
+}
+
+document.getElementById("search-btn").addEventListener("click", function(){
+    runGetBooks();
+})
+
+document.getElementById("search-btn").addEventListener("keyup", function(event){
+    if(event.key=="enter"){
+        runGetBooks();
+    } 
 })

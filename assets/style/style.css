@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+:root{
+    --green: #008000;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.5s ease;
+    background-color: rgb(65, 65, 65);
+}
+
+.topnav{
+    overflow: hidden;
+    background-color: rgb(46, 46, 46);
+}
+
+.topnav a{
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topnav a:hover{
+    color: var(--green);
+}
+
+.nav-link.active{
+    background-color: var(--green);
+    color: white;
+}
+
+.nav-link.active:hover{
+    color: black;
+}
+
+.container-body{
+    color: white;   
+}
+
+.search-bar{
+    width: 90%;
+}
+
+.search-bar-author{
+    width: 80%;
+}
+
+#book_cover{
+    float: right;
+    max-height: 500px;
+}
+
+.contents{
+    padding-top: 80px;
+    margin-top: 30px;
+}
