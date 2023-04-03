@@ -1,40 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="assets/script/main.js"></script>
-    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
     <title>Query Books</title>
   </head>
-  <body>
-
-    <div class="topnav">
-      <a href="author.html" class="authors nav-link">Authors</a>
-      <a href="books.html" class="books nav-link">Books</a>
-      <a href="index.html" class="home nav-link">Home</a>
+  <body class="bg-zinc-900 text-white font-[Roboto]">
+    <header
+      class="bg-black flex flex-col h-12 w-[100%] items-center justify-center"
+    >
+      <ul class="text-white text-lg">
+        <li>
+          <a href="/" class="no-underline hover:text-lime-600">Query Books</a>
+        </li>
+      </ul>
+    </header>
+    <div class="content-center items-center justify-center">
+      <div class="search-div flex items-center justify-center h-1/3 pt-5 text-black w-screen">
+        <input
+          type="text"
+          class="search-bar w-screen bg-gray-300 rounded-full  p-1"
+          id="book_query"
+          placeholder="Senhor dos Aneis"
+        />
+        <button
+          class="bg-lime-600 hover:bg-lime-700  font-bold py-1 px-4 ml-1 rounded-full" id="search-btn"
+        >
+          Query
+        </button>
+      </div>
     </div>
-    <div class="container container-body">
-    <h1>Query Books Here</h1>
-
-    <input type="text" class="search-bar" id="book_query" placeholder="Senhor dos Aneis">
-    <input type="submit" value="Search Book" id="search-btn">
-    <div class="container contents">
-        <img src="" alt="" id="book_cover">
-        <h2 id="book_title"></h2>
+    <div class="flex flex-col md:items-center md:justify-center pt-5">
+      <div class="flex p-5">
+        <div class="flex md:flex-col px-2">
+        <h2 id="book_title" class="text-2xl"></h2>
         <p id="book_desc"></p>
-        <a href="" ></a>
-
+        </div>
+        <img src="" alt="" id="book_cover" />
+      </div>
     </div>
-  </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div
+      class="absolute text-sm md:text-base bottom-0 left-1 text-black dark:text-white"
+    >
+      <p class="headline text-white">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        <a
+          href="https://whoisdg.onrender.com"
+          target="_blank"
+          class="no-underline hover:text-lime-700 hover:no-underline"
+          >DGclasher</a
+        >
+      </p>
+    </div>
   </body>
 </html>
